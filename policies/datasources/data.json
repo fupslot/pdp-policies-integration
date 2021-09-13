@@ -1,0 +1,121 @@
+{
+  "Roles & Permissions": {
+    "roles": {
+      "edges": [],
+      "nodes": [
+        {
+          "v": "_e6UcD0DR6ZwiMfxXn1Ei",
+          "value": {
+            "id": "_e6UcD0DR6ZwiMfxXn1Ei",
+            "name": "root",
+            "permissions": [
+              "user_write",
+              "user_read"
+            ]
+          }
+        },
+        {
+          "v": "CfUmzqThoLiMFJ6iKkoga",
+          "value": {
+            "id": "CfUmzqThoLiMFJ6iKkoga",
+            "name": "manager",
+            "permissions": [
+              "user_write",
+              "user_read"
+            ]
+          }
+        },
+        {
+          "v": "gz7wyyNZxY2aSoiEiIh4s",
+          "value": {
+            "id": "gz7wyyNZxY2aSoiEiIh4s",
+            "name": "user",
+            "permissions": [
+              "user_read"
+            ]
+          }
+        },
+        {
+          "v": "CABMRRUoyfdrVgZq6lfpw",
+          "value": {
+            "id": "CABMRRUoyfdrVgZq6lfpw",
+            "name": "guest",
+            "permissions": [
+              "user_read"
+            ]
+          }
+        }
+      ]
+    },
+    "permissions": {
+      "user_write": {},
+      "user_read": {}
+    },
+    "rbac": {
+      "root": {
+        "sub_roles": [],
+        "permissions": [
+          "user_write",
+          "user_read"
+        ]
+      },
+      "manager": {
+        "sub_roles": [],
+        "permissions": [
+          "user_write",
+          "user_read"
+        ]
+      },
+      "user": {
+        "sub_roles": [],
+        "permissions": [
+          "user_read"
+        ]
+      },
+      "guest": {
+        "sub_roles": [],
+        "permissions": [
+          "user_read"
+        ]
+      }
+    }
+  },
+  "rbac-testing-datasource": {
+    "roles": {
+      "admin": {
+        "permissions": [
+          "overview",
+          "person.edit"
+        ],
+        "includes": [
+          "developer"
+        ]
+      },
+      "developer": {
+        "permissions": [
+          "overview.view"
+        ],
+        "includes": [
+          "user"
+        ]
+      },
+      "user": {
+        "includes": [],
+        "permissions": [
+          "person.view",
+          "roles.view"
+        ]
+      }
+    },
+    "users": {
+      "alice": {
+        "id": 1,
+        "role": "admin"
+      },
+      "bob": {
+        "id": 2,
+        "role": "developer"
+      }
+    }
+  }
+}

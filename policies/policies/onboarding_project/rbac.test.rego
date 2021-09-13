@@ -1,0 +1,2 @@
+package bs.test.rbac
+
